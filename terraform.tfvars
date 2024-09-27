@@ -1,16 +1,16 @@
 # Configuration for DigitalOcean App Deployment
 
 # Application Specification
-spec_name              = "danieljsaldana"               # Name of the application
+spec_name              = "terraform-apps-digitalocean"    # Name of the application
 spec_region            = "fra"               # Region where the application will be deployed
 
 # Environment Variables for the Application
-env_key_globa_1        = "ENV"        # Global environment variable key
+env_key_globa_1        = "ENV"               # Global environment variable key
 env_value_global_1     = "production"        # Global environment variable value
 
 # Ingress Configuration for the Application
-component_micro_1      = "danieljsaldana"       # Name of the application component
-component_micro_1_prefix= "/"            # Path prefix for the application component
+component_micro_1      = "danieljsaldana"    # Name of the application component
+component_micro_1_prefix= "/"                # Path prefix for the application component
 
 # Service Configuration for the Application
 service_http_port_micro_1         = "3000"        # HTTP port for the service
