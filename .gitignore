@@ -2,3 +2,6 @@ terraform/terraform.tfstate.d/
 terraform/.*
 terraform/terraform.tfstate
 terraform/terraform.tfstate.backup
+.terraform/providers/registry.terraform.io/digitalocean/digitalocean/2.42.0/darwin_arm64/terraform-provider-digitalocean_v2.42.0
+.terraform.lock.hcl
+.terraform/

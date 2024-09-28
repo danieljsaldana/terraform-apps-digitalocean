@@ -1,10 +1,10 @@
 # Definition of the digitalocean_app resource named "dev"
 resource "digitalocean_app" "dev" {
-  
+
   # Configuration specific to the resource
   spec {
     # Application name, provided as an external variable
-    name   = var.spec_name
+    name = var.spec_name
 
     # Region where the application will be deployed, provided as an external variable
     region = var.spec_region
@@ -38,8 +38,8 @@ resource "digitalocean_app" "dev" {
       rule {
         component {
           # Component name, provided as an external variable
-          name                 = var.component_micro_1
-          
+          name = var.component_micro_1
+
           # Configuration to preserve the path prefix
           preserve_path_prefix = false
         }
@@ -55,23 +55,23 @@ resource "digitalocean_app" "dev" {
     # Configuration of the application service
     service {
       # Path to the Dockerfile
-      dockerfile_path    = "Dockerfile"
-      
+      dockerfile_path = "Dockerfile"
+
       # HTTP port the service will listen on, provided as an external variable
-      http_port          = var.service_http_port_micro_1
-      
+      http_port = var.service_http_port_micro_1
+
       # Number of instances for the service
-      instance_count     = var.service_instance_count_micro_1
-      
+      instance_count = 1
+
       # Instance size, provided as an external variable
-      instance_size_slug = var.service_instance_size_slug_micro_1
-      
+      instance_size_slug = "basic-xxs"
+
       # Internal ports of the Docker container (none in this case)
-      internal_ports     = []
-      
+      internal_ports = []
+
       # Service name, provided as an external variable
-      name               = var.service_name_micro_1
-      
+      name = var.service_name_micro_1
+
       # Configuration of alerts for the service
       alert {
         disabled = false
